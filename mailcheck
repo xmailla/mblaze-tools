@@ -43,7 +43,7 @@ wakeup () {
 
 mailcheck () {
 	echo $(ts) checking ...
-	$(echo $check_cmd | envsubst)
+	${check_cmd}
 	if [ -n "${index_cmd}" ]; then
 		echo $(ts) indexing ...
 		${index_cmd}
